@@ -1,0 +1,243 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9; /* Light background color */
+}
+
+h1, h2, h3 {
+    color: #4A7C3A; /* Green color for headings */
+}
+
+/* Hero Section */
+#hero {
+    position: relative;
+    margin-bottom: 20px; /* Space below the hero section */
+}
+
+.hero-container {
+    display: flex; /* Use flexbox for layout */
+    align-items: flex-start; /* Align items to the top */
+}
+
+.hero-logo {
+    width: 150px; /* Set a width for the logo */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 20px; /* Space between logo and text */
+}
+
+.hero-text {
+    max-width: 300px; /* Limit the width of the text */
+}
+
+.hero-text h1 {
+    font-size: 2em; /* Font size for the title */
+    margin: 0; /* Remove default margin */
+}
+
+.hero-text p {
+    font-size: 1em; /* Font size for the paragraph */
+    color: #333; /* Dark color for the paragraph text */
+    line-height: 1.5; /* Improve readability */
+}
+
+/* Product Grid */
+.product-grid {
+    display: flex;
+    justify-content: space-between; /* Space between product categories */
+    margin: 20px 0; /* Space above and below the grid */
+}
+
+.product-category {
+    position: relative; /* Position relative for absolute positioning of title */
+    flex: 1; /* Allow categories to grow equally */
+    margin: 0 10px; /* Space between categories */
+}
+
+.image-container {
+    position: relative; /* Position relative for absolute positioning of title */
+}
+
+.image-container img {
+    width: 100%; /* Full width of the container */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Optional: add rounded corners */
+    transition: transform 0.3s; /* Smooth transition for hover effect */
+}
+
+.product-category:hover .image-container img {
+    transform: none; /* Geen transformatie bij hover voor Producten */
+}
+
+.top-left-title {
+    position: absolute; /* Position absolutely within the container */
+    top: 10px; /* Position from the top */
+    left: 10px; /* Position from the left */
+    color: white; /* Text color */
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background for contrast */
+    padding: 5px 10px; /* Padding around the text */
+    border-radius: 5px; /* Rounded corners for the title background */
+    font-family: 'Replay Pro', sans-serif; /* Font for titles */
+    font-weight: bold; /* Make the title bold */
+    font-size: 1em; /* Font size */
+}
+
+/* Product Category Title - Vergroot de tekst bij hover */
+.product-category:hover .top-left-title {
+    font-size: 1.2em; /* Vergroot de tekstgrootte bij hover */
+    transition: font-size 0.3s; /* Voeg een overgang toe voor een soepele animatie */
+}
+
+/* Featured Brands */
+.brands-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* Set to 5 columns */
+    gap: 15px; /* Space between items */
+    padding: 20px; /* Padding around the grid */
+}
+
+.brand-item {
+    position: relative; /* Position relative for absolute positioning of title */
+    overflow: hidden; /* Hide overflow for hover effect */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: transform 0.3s; /* Smooth transition for hover effect */
+}
+
+.image-container img {
+    width: 100%; /* Full width of the container */
+    height: auto; /* Maintain aspect ratio */
+    transition: transform 0.3s; /* Smooth transition for hover effect */
+}
+
+.brand-item:hover .image-container img {
+    transform: scale(1.1); /* Enlarge the image on hover for Featured Brands */
+}
+
+.overlay-title {
+    position: absolute; /* Position absolutely within the container */
+    bottom: 5px; /* Position from the bottom */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Adjust for centering */
+    color: white; /* Text color */
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background for contrast */
+    padding: 3px 5px; /* Reduced padding around the text */
+    border-radius: 5px; /* Rounded corners for the title background */
+    font-family: 'Replay Pro', sans-serif; /* Font for titles */
+    font-weight: bold; /* Make the title bold */
+    font-size: 0.9em; /* Default font size */
+    text-align: center; /* Center the text */
+    transition: font-size 0.3s; /* Smooth transition for font size */
+}
+
+.brand-item:hover .overlay-title {
+    font-size: 1.3em; /* Increase font size on hover */
+}
+
+/* Map Section */
+.map-section {
+    text-align: center; /* Center the text */
+    margin: 40px 0; /* Space above and below the map */
+}
+
+.map-container {
+    max-width: 100%; /* Full width of the container */
+    margin: 0 auto; /* Center the map */
+}
+
+.map-container iframe {
+    width: 100%; /* Full width of the iframe */
+    height: 450px; /* Set a height for the map */
+    border-radius: 8px; /* Optional: add rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Button Container */
+.button-container {
+  display: flex; /* Gebruik flexbox voor lay-out */
+  justify-content: space-between; /* Ruimte tussen hamburger en nav-list */
+  align-items: center; /* Verticaal centreren */
+  padding: 10px; /* Padding voor de container */
+}
+
+/* Hamburger Menu */
+.hamburger {
+  display: none; /* Verberg de hamburgerknop standaard */
+  flex-direction: column; /* Stapel de lijnen verticaal */
+  cursor: pointer; /* Verander de cursor naar pointer */
+}
+
+.hamburger div {
+  width: 25px; /* Breedte van de lijnen */
+  height: 3px; /* Hoogte van de lijnen */
+  background-color: #333; /* Kleur van de lijnen */
+  margin: 4px 0; /* Ruimte tussen de lijnen */
+}
+
+/* Media Query voor Mobiele Apparaten */
+@media (max-width: 768px) {
+  .nav-list {
+    display: none; /* Verberg de nav-list op mobiele apparaten */
+    flex-direction: column; /* Stapel de links verticaal */
+    position: absolute; /* Positioneer het menu absoluut */
+    top: 50px; /* Plaats het onder de hamburger */
+    right: 0; /* Plaats het aan de rechterkant */
+    background-color: #f8f8f8; /* Achtergrondkleur voor het menu */
+    width: 100%; /* Volledige breedte */
+    z-index: 1000; /* Zorg ervoor dat het boven andere elementen staat */
+  }
+
+  .nav-list.active {
+    display: flex; /* Toon de nav-list als het actief is */
+  }
+
+  .hamburger {
+    display: flex; /* Toon de hamburgerknop op mobiele apparaten */
+  }
+}
+
+/* Navigation Styles */
+.nav-list {
+  list-style-type: none; /* Remove default list styling */
+  padding: 0; /* Remove default padding */
+  display: flex; /* Use flexbox for horizontal layout */
+  justify-content: flex-end; /* Plaats de nav-items aan de rechterkant */
+  background-color: #f8f8f8; /* Background color for the nav */
+  padding: 10px 0; /* Padding for the nav */
+}
+
+.nav-list li {
+  margin: 0 15px; /* Space between list items */
+}
+
+.nav-list a {
+  text-decoration: none; /* Remove underline from links */
+  color: #333; /* Text color */
+  font-weight: bold; /* Bold text */
+  transition: color 0.3s; /* Smooth transition for hover effect */
+}
+
+/* Geen hover effect voor de "Producten" link */
+.nav-list li:first-child a:hover {
+  color: inherit; /* Behoud de kleur zonder verandering */
+}
+
+/* Hover effect voor navigatieknoppen */
+.nav-list a:hover {
+  color: #FFD700; /* Donker geel kleur bij hover */
+}
+
+/* Header Styles */
+header {
+    display: flex; /* Gebruik flexbox voor de header */
+    justify-content: space-between; /* Ruimte tussen heroImage en nav */
+    align-items: center; /* Verticaal centreren */
+    padding: 10px; /* Padding voor de header */
+}
+
+/* Hero Container */
+.hero-container {
+    display: flex; /* Gebruik flexbox voor de hero-container */
+    align-items: center; /* Verticaal centreren */
+}
