@@ -22,12 +22,6 @@ import brand15 from '../assets/brand.jpg'; // The tiny big sister
 import brand16 from '../assets/brand.jpg'; // Thinking Mu
 
 function HomePage() {
-  // Toggle functie voor het menu
-  const toggleMenu = () => {
-    const navList = document.querySelector('.nav-list');
-    navList.classList.toggle('active'); // Toggle de actieve klasse
-  };
-
   return (
     <div className="homepage">
       <header>
@@ -36,11 +30,6 @@ function HomePage() {
         </div>
         <nav>
           <div className="button-container">
-            <div className="hamburger" onClick={toggleMenu}>
-              <div></div>
-              <div></div>
-              <div></div>
-            </div>
             <ul className="nav-list">
               <li><a href="#products">Producten</a></li>
               <li><a href="#brands">Uitgelichte Merken</a></li>
@@ -215,34 +204,12 @@ function HomePage() {
           </div>
         </section>
 
-        <section id="about" className="about-section">
-          <div className="about-container">
-            <h2>Over ons</h2>
-            <p>
-              Babette Concept is uw one-stop shop voor baby-, vrouwen- en kindermode. Wij bieden een zorgvuldig samengestelde selectie van hoogwaardige, stijlvolle producten voor het hele gezin.
-            </p>
-          </div>
+        <section className="tagline-section">
+          <h2 className="tagline">Over ons</h2>
+          <p className="tagline-description">
+            Concept store voor baby’s, kinderen en mama’s die achter hun kinderen moeten lopen.
+          </p>
         </section>
-
-        {/* <section id="location">
-          <h2>Bezoek Ons</h2>
-          <div className="map-container">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2508.905500338372!2d2.7079833!3d51.1225037!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTHCsDAwJzAwLjAiTiA0wrAwMCcwMC4wIkU!5e0!3m2!1sen!2sbe!4v1686665663619!5m2!1sen!2sbe"
-              width="600"
-              height="450"
-              style={{border:0}}
-              allowFullScreen=""
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-            ></iframe>
-          </div>
-          <div className="contact-info">
-            <p>Adres: Albert I-laan 75, 8670 Oostduinkerke, België</p>
-            <p>Telefoon: +32 460 97 07 42</p>
-            <p>Email: <a href="mailto:info@babetteconcept.be">info@babetteconcept.be</a></p>
-          </div>
-        </section> */}
 
         <section id="location" className="map-section">
           <h2>Onze Locatie</h2>

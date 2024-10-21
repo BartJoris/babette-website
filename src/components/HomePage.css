@@ -156,45 +156,9 @@ h1, h2, h3 {
 /* Button Container */
 .button-container {
   display: flex; /* Gebruik flexbox voor lay-out */
-  justify-content: space-between; /* Ruimte tussen hamburger en nav-list */
+  justify-content: flex-end; /* Ruimte tussen nav-list en andere elementen */
   align-items: center; /* Verticaal centreren */
   padding: 10px; /* Padding voor de container */
-}
-
-/* Hamburger Menu */
-.hamburger {
-  display: none; /* Verberg de hamburgerknop standaard */
-  flex-direction: column; /* Stapel de lijnen verticaal */
-  cursor: pointer; /* Verander de cursor naar pointer */
-}
-
-.hamburger div {
-  width: 25px; /* Breedte van de lijnen */
-  height: 3px; /* Hoogte van de lijnen */
-  background-color: #333; /* Kleur van de lijnen */
-  margin: 4px 0; /* Ruimte tussen de lijnen */
-}
-
-/* Media Query voor Mobiele Apparaten */
-@media (max-width: 768px) {
-  .nav-list {
-    display: none; /* Verberg de nav-list op mobiele apparaten */
-    flex-direction: column; /* Stapel de links verticaal */
-    position: absolute; /* Positioneer het menu absoluut */
-    top: 50px; /* Plaats het onder de hamburger */
-    right: 0; /* Plaats het aan de rechterkant */
-    background-color: #f8f8f8; /* Achtergrondkleur voor het menu */
-    width: 100%; /* Volledige breedte */
-    z-index: 1000; /* Zorg ervoor dat het boven andere elementen staat */
-  }
-
-  .nav-list.active {
-    display: flex; /* Toon de nav-list als het actief is */
-  }
-
-  .hamburger {
-    display: flex; /* Toon de hamburgerknop op mobiele apparaten */
-  }
 }
 
 /* Navigation Styles */
@@ -240,4 +204,38 @@ header {
 .hero-container {
     display: flex; /* Gebruik flexbox voor de hero-container */
     align-items: center; /* Verticaal centreren */
+}
+
+/* Media Query voor Mobiele Apparaten */
+@media (max-width: 768px) {
+  .nav-list {
+    display: flex; /* Zorg ervoor dat de nav-list zichtbaar is op mobiele apparaten */
+    flex-direction: column; /* Stapel de links verticaal */
+    position: static; /* Verander de positie naar statisch */
+    background-color: #f8f8f8; /* Achtergrondkleur voor het menu */
+    width: 100%; /* Volledige breedte */
+    z-index: 1000; /* Zorg ervoor dat het boven andere elementen staat */
+  }
+
+  .nav-list.active {
+    display: flex; /* Toon de nav-list als het actief is */
+  }
+}
+
+/* Tagline Section */
+.tagline-section {
+    text-align: center; /* Center de tekst */
+    margin: 40px 0; /* Ruimte boven en onder de tagline */
+}
+
+.tagline {
+    font-size: 1.5em; /* Grotere tekstgrootte voor de tagline */
+    font-weight: bold; /* Maak de tagline vetgedrukt */
+    color: #4A7C3A; /* Kleur voor de tagline */
+}
+
+.tagline-description {
+    font-size: 1em; /* Standaard tekstgrootte voor de beschrijving */
+    color: #333; /* Kleur voor de beschrijving */
+    line-height: 1.5; /* Verbeter leesbaarheid */
 }
